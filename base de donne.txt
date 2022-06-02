@@ -1,0 +1,7 @@
+ALTER TABLE `product` ADD FOREIGN KEY (`id_c`) REFERENCES `categorie`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `type_cat` ADD FOREIGN KEY (`fk_c`) REFERENCES `categorie`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+SELECT product.name, product.image, descr, prix, categorie.name,categorie.image 
+FROM product, type_cat, categorie
+WHERE product.id=type_cat.fk_p and type_cat.fk_c=categorie.id
+and categorie.id=1

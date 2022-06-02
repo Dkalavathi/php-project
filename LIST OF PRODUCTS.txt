@@ -1,0 +1,113 @@
+
+
+MAQUILLAGE           BEAUTE                SOINS
+PAUPILLER            VERNIS              HUILE
+EYELINER             COULEUR CHEVEUX     PARFUME 
+EYEMASKARA           ONCLES              DEODRANTE
+SOURCIL              DEMAQUILLANTE       MASSAGE HULE
+TEINTS               NETTOYANTE          BAUME PARFUM
+FONDS DE COULEUR     CREME SOLAIRE       SHAMPOOING
+ROUGE A LEVRES       TOUS PRODUIT BEAUTE CONDITIONNER 
+PALETTES                                 HYGIENE(main et pieds)
+COFFRETS                                 GEL DOUCHE
+TOUS LES PRODUIT
+MAQUILLAGE                                          
+										  
+				
+				-	J’ai créé un formulaire de connexion réactif avec CSS, HTML et JavaScript.
+-	Le composant Modal est une boîte de dialogue / fenêtre contextuelle affichée en haut de la page en cours et j’ajoute une image dans un conteneur et ajoute des entrées (avec une étiquette correspondante) pour chaque champ et enroule un élément <form> autour d'eux pour traiter l'entrée.
+-	Pour le login button, j’ai utilisé le modal class « modal-content animate ». Grace à cette animat class, lorsque l’utilisateur clique sur le login button, une fenêtre login form Pop-Up se déclenche. Grace  à ce responsive framework en html, un espace utilisateur a été créé afin que les utilisateurs puissent se connecter à l’aide d’un mot de passe et nom d’utilisateur. Ensuite j’entre les valeurs de username et password. je crée les libelle comme username et password et textbox pour entre les valeurs et le button de login et cancel.
+-	L’utilisateur pourra donc se connecter et se rendre à son espace personnel. 
+-	J’ai utilisé le framework bootstrap« CSS Cascade style sheet ». Afin de définir les dimensions, les couleurs, positions et les dimensions. Dans CSS, les sélecteurs sont des modèles utilisés pour sélectionner de style l’élément(s). Je sélectionne l’élément d’entrée qui a le focus close:hover et close :focus qui a le focus.Dans le login form, pour définir la balise de chaque style, j’ai défini un class « modal » sur CSS. Ainsi, le même style de balise sera appliqué à l’ensemble du site.  
+-	J’ai utilisé la class « Container » afin de définir les positions de l’espace utilisateur et il permet de définir le remplissage à gauche et à droite (16PX pour ce site) pour chaque élément HTML.
+-	Je utilisés les sélecteurs jQuery me permettent de sélectionner et de manipuler des éléments HTML basés sur leur nom, id, classes, types, attributs, valeurs des attributs et bien plus encore. Il est basé sur les sélecteurs CSS existants. Je déclare le JQuery selector comme modal est document.getElementById (id01) et le modal.style.display est none.En effet,quand les utilisateurs clique en dehors de modal, la fenêtre login se fermée automatiquement. 
+-	Je utiliser les JQuery fade, je effacer des éléments dans et hors de la visibilité.
+-	Je passer les souris (mouse over) sur le dropdown menu (fade in), les items sont apparaitre et je clique en dehors de dropdown menu (mouse out), les items sont disparaitre (fade out).
+onclick="document.getElementById('id01').style.display='block'" style="width:auto;
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="16dp"
+    tools:context="com.example.quiz.MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:0"
+        android:textColor="@android:color/black"
+        />
+
+    <TextView
+        android:id="@+id/text_view_question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question=1/x"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/text_view_score" />
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textcolor="@android:color/black"
+        android:text="00:30"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/text_view_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="here will be the question text\here will be the question text\here will be the question text"
+        android:textSize="20sp"
+        android:layout_above="@id/radio_group"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+         />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="option 1" />
+
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="option 2" />
+
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="option 3" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_confirm_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group"
+        android:layout_marginTop="16dp"
+        android:text="confirm" />
+
+
+</RelativeLayout>
+
+
+
